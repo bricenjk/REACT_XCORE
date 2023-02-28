@@ -21,6 +21,13 @@ Un espace qui nous permet de voir nos commandes si on se connecte.
 ## Déploiement
 
 
+## Journal de Bord
+
+https://tranquil-myrtle-ddc.notion.site/XCORE-PROJECT-5b14dea951104cbab8ad1841ae1d893f
+
+## Gestion du projet | Trello
+
+https://trello.com/invite/b/DTKWm7vd/ATTI016aa8a841d4672740676d350ef6bc9b645B0B3F/ecommerce
 
 ## Contributeurs
 
