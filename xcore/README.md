@@ -33,10 +33,6 @@ https://trello.com/invite/b/DTKWm7vd/ATTI016aa8a841d4672740676d350ef6bc9b645B0B3
 
 - Brice NJOMKAM 
 
-## Licence
-
-`MIT`.
-
 ## Remerciements
 
 Un grand merci à tous 😊
