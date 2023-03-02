@@ -1,5 +1,3 @@
-import React from 'react';
-import ProductItem from '../Product/ProductItem';
 import Navbar from '../Navigation/Navbar';
 
 // interface CartProps {

@@ -26,25 +26,19 @@ const Navbar = () => {
         >
           <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <Link to="/register">
-                <a className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <Link to="/register">
                   REGISTER
-                </a>
               </Link>
             </li>
             <li>
-              <Link to="/cart">
-                <a className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  📦 0
+                <a href="/cart" className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  📦  0 👀
                 </a>
-              </Link>
             </li>
             <li>
-              <Link to="/profile">
-                <a className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  👤
+                <a href="/profile" className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  👤 PROFILE
                 </a>
-              </Link>
             </li>
           </ul>
         </div>
