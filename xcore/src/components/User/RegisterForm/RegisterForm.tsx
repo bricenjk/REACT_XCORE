@@ -31,7 +31,7 @@ const RegisterForm = () => {
         cart: initialecartvalue
       }).then(() => {
 
-        setSuccessMessage('User created successfully');
+        setSuccessMessage('successfull ✅');
         setUserEmail(''),
         setUserPassword(''),
         setUserName('')
@@ -56,6 +56,7 @@ const RegisterForm = () => {
             className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
           >
              ⚡️ REGISTER 
+             <br/>
              {successMessage}
              {errorMessage}
           </p>

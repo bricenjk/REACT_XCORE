@@ -27,18 +27,33 @@ const Navbar = () => {
           <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
             <Link to="/register">
-                  REGISTER
+            <button
+              type="button"
+              className="text-white bg-black  hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-black-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              REGISTER
+            </button>
               </Link>
             </li>
             <li>
-                <a href="/cart" className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  📦  0 👀
-                </a>
+            <Link to="/cart">
+            <button
+              type="button"
+              className="text-white bg-black  hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-black-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              📦 0 👀
+            </button>
+              </Link>
             </li>
             <li>
-                <a href="/profile" className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  👤 PROFILE
-                </a>
+            <Link to="/profile">
+            <button
+              type="button"
+              className="text-white bg-black  hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-black-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              👤 PROFILE
+            </button>
+              </Link>
             </li>
           </ul>
         </div>

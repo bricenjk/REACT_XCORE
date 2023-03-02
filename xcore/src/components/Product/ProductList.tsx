@@ -1,41 +1,42 @@
-import  {useState, useEffect} from 'react';
-import {collection, getDocs} from 'firebase/firestore';
-// import ProductItem from './ProductItem';
-import {db} from '../../FirebaseConfiguration/firebaseConfig'
+import { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../FirebaseConfiguration/firebaseConfig';
+import { DocumentData } from 'firebase/firestore';
 
-// interface ProductListProps {
-//   products: Product[];
-// }
-
-// const ProductList: React.FC<ProductListProps> = ({ products }) => {
-//   return (
-//     <div className="product-list">
-//       {products.map((product) => (
-//         <ProductItem key={product.id} product={product} />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default ProductList;
-
+interface Product {
+  data: DocumentData;
+  id: string;
+}
 
 const ProductList = () => {
-  const [product, setProdcut] = useState([]);
-  function getProduct() {
-    const productCollectionRef = collection(db, 'Store');
-    getDocs(productCollectionRef).then((response) => {console.log(response.docs)})
-    .catch((error) => console.log(error.message));}
+  const [products, setProducts] = useState<Product[]>([]);
 
-    useEffect(() => {
-      getProduct();
-    }, [])
+  useEffect(() => {
+    getProduct();
+  }, []);
+
+  useEffect(() => {
+    console.log(products);
+  }, [products]);
+
+  function getProduct() {
+    const productCollectionRef = collection(db, 'Article');
+    getDocs(productCollectionRef)
+      .then(response => {
+        const products = response.docs.map(doc => ({
+          data: doc.data(),
+          id: doc.id,
+        }));
+        setProducts(products);
+      })
+      .catch((error) => console.log(error.message));
+  }
   
-    return (
+  return (
     <div>
       Liste des produits
     </div>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;
