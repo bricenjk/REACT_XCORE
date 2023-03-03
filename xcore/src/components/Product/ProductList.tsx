@@ -20,7 +20,7 @@ const ProductList = () => {
   }, [products]);
 
   function getProduct() {
-    const productCollectionRef = collection(db, "Article");
+    const productCollectionRef = collection(db, "Store");
     getDocs(productCollectionRef)
       .then((response) => {
         const products = response.docs.map((doc) => ({
@@ -33,35 +33,31 @@ const ProductList = () => {
   }
 
   return (
-    <div>
-      <ul>
+    <div className="bg-gray-50 dark:bg-gray-900">
+      <div className="grid grid-rows-4 grid-flow-col gap-4">
         {products.map((product) => (
-          <li key={product.id}>
-            <div>
-              <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700" />
-              <li className="pb-3 sm:pb-4">
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                      {product.data.name}
-                    </p>
-                    <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                      {product.data.description}
-                    </p>
-                  </div>
-                  <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    {product.data.price}
-                  </div>
-                </div>
-              </li>
-              <div />
-              <ul />
+          <div
+            className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
+            key={product.id}
+          >
+            <div className="shrink-0"></div>
+            <div className="flex-shrink-0">
+              <img
+                className="w-8 h-8 rounded-full"
+                src={product.data.image}
+                alt="Neil image"
+              />
             </div>
-          </li>
+            <div>
+              <div className="text-xl font-medium text-black">
+                <p>{product.data.nom}</p>
+              </div>
+              {product.data.prix} $
+              <p className="text-slate-500">{product.data.description}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
