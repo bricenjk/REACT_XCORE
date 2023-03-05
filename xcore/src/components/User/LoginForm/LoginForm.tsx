@@ -1,6 +1,6 @@
 import Navbar from '../../Navigation/Navbar'
 
-const LoginForm = () => {
+function LoginForm(){
   return (
     <div>
       <Navbar/>
