@@ -4,7 +4,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/User/LoginForm/LoginForm';
 import Cart from './Components/Cart/Cart';
 import Profile from './Components/User/Profile';
-import RegisterForm from './Components/User/RegisterForm/RegisterForm';
+import {RegisterForm} from './Components/User/RegisterForm/RegisterForm';
 
 function App() {
   return (

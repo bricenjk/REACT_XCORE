@@ -1,7 +1,7 @@
 import Navbar from "../Navigation/Navbar";
 import ProductList from "../Product/ProductList";
 
-const Home = () => {
+function Home() {
     return (
    
         <div>
