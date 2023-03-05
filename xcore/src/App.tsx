@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Components/Home/Home';
-import Login from './Components/User/LoginForm/LoginForm';
+import Home from './Components/Home/Home'
+import Login from './Components/User/LoginForm/LoginForm'
+import RegisterForm from './Components/User/RegisterForm/RegisterForm'
+import Profile from './Components/User/Profile'
 import Cart from './Components/Cart/Cart';
-import Profile from './Components/User/Profile';
-import RegisterForm from './Components/User/RegisterForm/RegisterForm';
+
 
 function App() {
   return (
